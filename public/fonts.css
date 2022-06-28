@@ -2,3 +2,7 @@
   font-family: Ubuntu;
   src: url('./fonts/Ubuntu-Regular.ttf');
 }
+
+div, span, tr, td, li, h1, h2, h3, h4 {
+  font-family: Ubuntu;
+}

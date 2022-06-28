@@ -5,8 +5,8 @@ import { ReactUI } from './components/ReactUI';
 function App() {
   return (
     <div className='app'>
-      <Web3Fullstack />
-      {/* <ReactUI /> */}
+      {/* <Web3Fullstack /> */}
+      <ReactUI />
     </div>
   );
 }

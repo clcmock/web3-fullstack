@@ -1,10 +1,12 @@
 import React from 'react';
 import { Web3Fullstack } from './components/Web3Fullstack';
+import { ReactUI } from './components/ReactUI';
 
 function App() {
   return (
-    <div className='App'>
-      <Web3Fullstack />
+    <div className='app'>
+      {/* <Web3Fullstack /> */}
+      <ReactUI />
     </div>
   );
 }

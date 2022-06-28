@@ -19,7 +19,7 @@ const NETWORK_CONFIG = {
 export const setupNetwork = async () => {
   const provider = window.ethereum;
   if (!provider) return;
-  const chainId = parseInt(process.env.REACT_APP_CHAIN_ID ?? '56', 10) as keyof typeof NETWORK_CONFIG;
+  const chainId = parseInt(process.env.REACT_APP_CHAIN_ID ?? '97', 10) as keyof typeof NETWORK_CONFIG;
 
   if (!NETWORK_CONFIG[chainId]) {
     console.error('Invalid chain id');

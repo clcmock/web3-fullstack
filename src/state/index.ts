@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import walletReducer from './wallet';
+import oracleReducer from "./oracle";
 
 export const store = configureStore({
   reducer: {
-    wallet: walletReducer
+    wallet: walletReducer,
+    oracle: oracleReducer
   }
 });
 

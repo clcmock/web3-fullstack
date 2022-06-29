@@ -25,19 +25,18 @@ async function startTokenListen(tokenAbi, tokenAddress, fromAddress) {
     intervalNumber = setInterval(function () {
         try {
             web3.eth.getBlockNumber().then(function (fromBlockNumber ) {
-                console.log(fromBlockNumber, 1111111111111)
-                // tokenContract.getPastEvents('Transfer', {
-                //     fromBlock: 20592800,
-                //     filter: {from: fromAddress}
-                // }, function(error, events){
-                //     if (error) {
-                //         console.log(error)
-                //         return;
-                //     }
+                tokenContract.getPastEvents('Transfer', {
+                    fromBlock: 20592800,
+                    filter: {from: fromAddress}
+                }, function(error, events){
+                    if (error) {
+                        console.log(error)
+                        return;
+                    }
                    
-                // }).then(function(events) {
-                //     console.log(events)
-                // });
+                }).then(function(events) {
+                    console.log(events)
+                });
             });
         } catch (err) {
             console.log(err)
@@ -56,7 +55,7 @@ function judgeObjCalss(obj,className) {
     }
 }
 
-const bep20Abi = require('./src/config/abi/erc20.json');
+const bep20Abi = require('../src/config/abi/erc20.json');
 const tokenAddress = '0x3882BF7AD77B147Ba3e766a47AEAD6Cf4a57417d';
 const account = '0x01C31F8e778F248c45BfC9129f0Fd547D46ffcB2'
 startTokenListen(bep20Abi, tokenAddress, account);

@@ -5,9 +5,10 @@
   background-size: 100% 100%;
   background-position: left top;
   background-color: #29263F;
-  &:hover{
+  &:hover, &.select{
     background-image: url('./img/bg_select.png');
   }
+  
   .card-left{
     width: 128px;
     padding-right: 10px;
@@ -46,6 +47,7 @@
       line-height: 25px;
       color: #fff;
       text-align: right;
+      width: 100%;
     }
     .time{
       font-weight: 500;
@@ -59,5 +61,34 @@
   .statuc-icon{
     display: inline-block;
     margin-right: 7px;
+  }
+  &.skeleton-card{
+    .card-left,
+    .card-right {
+      padding: 10px;
+    }
+    .loading-item{
+      height: 22px;
+      width: 100%;
+      background-color: #76FCB3;
+      background-image: linear-gradient(90deg, #29263F 5%, #807e7e 37%, #29263F 93%);
+      background-size: 200% 100%;
+      background-position: 0% 0%;
+      animation: skeleton-loading 1s ease infinite;
+
+    }
+    @keyframes skeleton-loading {
+      0% { background-position: 100% 0%; }
+      100% {background-position: 0% 100%;}
+    }
+    .loading{
+      width: 100%;
+    }
+    .padding{
+      padding: 10px;
+    }
+    .top{
+      padding: 10px;
+    }
   }
 }

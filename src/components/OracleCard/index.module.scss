@@ -1,0 +1,94 @@
+.oracle-card{
+  width: 290px;
+  height: 138px;
+  background-image: url('./img/bg.png');
+  background-size: 100% 100%;
+  background-position: left top;
+  background-color: #29263F;
+  &:hover, &.select{
+    background-image: url('./img/bg_select.png');
+  }
+  
+  .card-left{
+    width: 128px;
+    padding-right: 10px;
+    .top{
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      color: #fff;
+      padding-top: 4px;
+    }
+  }
+  .card-right{
+    padding-right: 15px;
+    .top{
+      padding-top: 4px;
+    }
+    .active, .terminted, .suspended{
+      color: #76FCB3;
+      font-weight: 700;
+      font-size: 18px;
+      
+    }
+    .terminted{
+      color: #FF007A;
+    }
+    .suspended{
+      color: #FFE500;
+    }
+    .amount{
+      font-weight: 500;
+      font-size: 21.4286px;
+      line-height: 25px;
+      color: #fff;
+      text-align: right;
+      width: 100%;
+    }
+    .time{
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 24px;
+      color: #fff;
+      text-align: right;
+      margin-top: 13px;
+    }
+  }
+  .statuc-icon{
+    display: inline-block;
+    margin-right: 7px;
+  }
+  &.skeleton-card{
+    .card-left,
+    .card-right {
+      padding: 10px;
+    }
+    .loading-item{
+      height: 22px;
+      width: 100%;
+      background-color: #76FCB3;
+      background-image: linear-gradient(90deg, #29263F 5%, #807e7e 37%, #29263F 93%);
+      background-size: 200% 100%;
+      background-position: 0% 0%;
+      animation: skeleton-loading 1s ease infinite;
+
+    }
+    @keyframes skeleton-loading {
+      0% { background-position: 100% 0%; }
+      100% {background-position: 0% 100%;}
+    }
+    .loading{
+      width: 100%;
+    }
+    .padding{
+      padding: 10px;
+    }
+    .top{
+      padding: 10px;
+    }
+  }
+}
